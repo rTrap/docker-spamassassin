@@ -24,11 +24,9 @@ RUN mkdir -p /etc/spamassassin/sa-update-keys \
 
 RUN sed -i 's/^logfile = .*$/logfile = \/dev\/stderr/g' /etc/razor/razor-agent.conf
 
-#COPY spamd.sh /
-
-#COPY rule-update.sh /
-
-#COPY run.sh /
+COPY conf/spamd.sh /
+COPY conf/update.sh /
+COPY conf/run.sh /
 
 EXPOSE 783
 
