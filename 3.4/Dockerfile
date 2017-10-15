@@ -9,8 +9,7 @@ RUN apt-get update \
     libsocket-getaddrinfo-perl \
     pyzor \
     razor \
-    spamassassin && \
-    apt-get clean && \
+    spamassassin \
  && rm -r /var/lib/apt/lists/*
  
 RUN mkdir -p /etc/spamassassin/sa-update-keys \
